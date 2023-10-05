@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+  --scale: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins";
+  transition: all 1s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  @media (min-width: 500px) {
+    width: 50%;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  text-align: justify;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.btn {
+  align-self: flex-end;
+  margin: 10px 0;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--scale);
+  height: calc(var(--scale) / 2);
+  background-color: #262626;
+  border-radius: calc(var(--scale) / 4);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.ball {
+  position: absolute;
+  width: calc(var(--scale) / 2);
+  height: calc(var(--scale) / 2);
+  background-image: radial-gradient(yellow, green);
+  border-radius: 50%;
+  border: 2px solid lightgray;
+  transition: all 1s ease;
+}
+
+.scenery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 8px 0px 8px;
+}
+
+svg {
+  width: calc(var(--scale) / 3);
+}
